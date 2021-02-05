@@ -1,4 +1,4 @@
-# next-with-github-api
+# tiny-github
 
 > 이 프로젝트는 Next.js와 github api를 사용해서 만든 tiny-github 저장소 입니다.
 
