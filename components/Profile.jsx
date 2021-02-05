@@ -48,7 +48,6 @@ const Profile = ({ user }) => {
     return null;
   }
 
-  console.log(user);
   return (
     <>
       <div className="profile-box">
@@ -59,9 +58,12 @@ const Profile = ({ user }) => {
             alt={`${user.name} 프로필 이미지`}
           />
         </div>
-        <h2 className="profile-username">{user.name}</h2>
-        <p className="profile-user-login">{user.login}</p>
-
+        <h2 className="profile-username">
+          {user.name ? user.name : 'username'}
+        </h2>
+        <p className="profile-user-login">
+          {user.login ? user.login : 'login'}
+        </p>
         <p className="profile-user-bio">
           {user.bio ? user.bio : 'Basic in the end'}
         </p>
