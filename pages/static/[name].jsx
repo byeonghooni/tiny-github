@@ -9,7 +9,6 @@ const name = ({ user, time }) => {
     </div>
   );
 };
-
 export const getStaticProps = async ({ params }) => {
   try {
     const res = await fetch(`https://api.github.com/users/${params.name}`);

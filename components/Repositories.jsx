@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import formatDistance from 'date-fns/formatDistance';
@@ -88,7 +88,7 @@ const style = css`
 `;
 const Repositories = ({ user, repos }) => {
   const router = useRouter();
-  const { page = "1" } = router.query;
+  const { page = '1' } = router.query;
   if (!user || !repos) {
     return null;
   }
@@ -97,11 +97,11 @@ const Repositories = ({ user, repos }) => {
       <div className="repos-header">
         Repositories
         <span className="repos-count">
-            {user.public_repos}
-          </span>
+          {user.public_repos}
+        </span>
       </div>
       {
-        repos.map(repo => (
+        repos.map((repo) => (
           <div key={repo.id} className="repository-wrapper">
             <a
               target="_blank"
@@ -113,13 +113,13 @@ const Repositories = ({ user, repos }) => {
             <p className="repository-description">{repo.description}</p>
             <p className="repository-language">
               {repo.language}
-              <span className="repository-updated-at" >
-                    {
+              <span className="repository-updated-at">
+                {
                       formatDistance(new Date(repo.updated_at), new Date(), {
-                        addSuffix: true
+                        addSuffix: true,
                       })
                     }
-                  </span>
+              </span>
             </p>
           </div>
         ))
@@ -127,15 +127,16 @@ const Repositories = ({ user, repos }) => {
       <div className="repository-pagination">
         <Link href={`/users/${user.login}?page=${Number(page) - 1}`}>
           <a>
-            <button type="button" disabled={page && page === "1"}>
+            <button type="button" disabled={page && page === '1'}>
               Previous
             </button>
           </a>
         </Link>
 
         <Link href={`/users/${user.login}?page=${
-          !page ? "2" : Number(page) + 1
-        }`}>
+          !page ? '2' : Number(page) + 1
+        }`}
+        >
           <a>
             <button type="button" disabled={repos.length < 10}>
               Next
@@ -145,7 +146,6 @@ const Repositories = ({ user, repos }) => {
         <style jsx>{style}</style>
       </div>
     </div>
-
   );
 };
 

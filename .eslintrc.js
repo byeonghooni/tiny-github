@@ -36,6 +36,8 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off', // nextjs 에서는 a에 href없이 사용
     'jsx-a11y/label-has-associated-control': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
 
   },
 };

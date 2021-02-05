@@ -17,13 +17,13 @@ version 2021.06.0
 Clone a copy of the project repository:
 
 ```bash
-git clone https://github.com/byeonghooni/web-crawling.git
+git clone https://github.com/byeonghooni/tiny-github.git
 ``` 
 
 Change to the project directory:
 
 ```bash
-cd web-crawling
+cd tiny-github
 ```
 
 Building a project:

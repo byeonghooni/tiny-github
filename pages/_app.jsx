@@ -1,20 +1,17 @@
 import Header from '../components/Header';
 
-const MyApp = ({ Component, pageProps }) => {
-  return (
-    <>
-      <Header />
-      <Component {...pageProps} />
-      <style jsx global>
-        {`
+const MyApp = ({ Component, pageProps }) => (
+  <>
+    <Header />
+    <Component {...pageProps} />
+    <style jsx global>
+      {`
           body {
             margin: 0;
             font-family: Noto Sans, Noto Sans KR;
           }
         `}
-      </style>
-    </>
-  );
-}
-
+    </style>
+  </>
+);
 export default MyApp;

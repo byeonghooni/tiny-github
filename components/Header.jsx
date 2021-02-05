@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import css from 'styled-jsx/css';
 import { IoLogoGithub } from 'react-icons/io';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
 const HeaderCss = css`
   .header-wrapper {
@@ -39,7 +39,7 @@ const Header = () => {
     e.preventDefault();
     router.push(`/users/${username}`);
     setUsername('');
-  }
+  };
 
   return (
     <>
@@ -48,7 +48,7 @@ const Header = () => {
         <form className="header-search-form" onSubmit={onSubmit}>
           <input
             value={username}
-            onChange={e => setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </form>
         <nav className="header-navigations">
